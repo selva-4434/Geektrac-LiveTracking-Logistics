@@ -13,7 +13,12 @@ export const FleetStatusChart = ({ data }) => {
       backgroundColor: ['#4caf50', '#ff9800', '#f44336', '#9e9e9e', '#ffffff'],
     }],
   };
-  return <Doughnut data={chartData} />;
+  // return <Doughnut data={chartData} />;
+  return (
+    <div style={{ height: '200px', position: 'relative' }}>
+      <Doughnut data={chartData} />
+    </div>
+  );
 };
 
 // ModelWiseChart
@@ -27,7 +32,12 @@ export const ModelWiseChart = ({ data }) => {
       backgroundColor: ['#3f51b5', '#2196f3', '#00bcd4'],
     }],
   };
-  return <Doughnut data={chartData} />;
+  // return <Doughnut data={chartData} />;
+  return (
+    <div style={{ height: '200px', position: 'relative' }}>
+      <Doughnut data={chartData} />
+    </div>
+  );
 };
 
 
@@ -42,7 +52,12 @@ export const ObjectTypeChart = ({ data }) => {
       backgroundColor: ['#4caf50', '#ff9800', '#f44336'],
     }],
   };
-  return <Doughnut data={chartData} />;
+  // return <Doughnut data={chartData} />;
+  return (
+    <div style={{ height: '200px', position: 'relative' }}>
+      <Doughnut data={chartData} />
+    </div>
+  );
 };
 
 
@@ -57,7 +72,12 @@ export const MobileVsWebChart = ({ data }) => {
       backgroundColor: ['#2196f3', '#4caf50'],
     }],
   };
-  return <Doughnut data={chartData} />;
+  // return <Doughnut data={chartData} />;
+  return (
+    <div style={{ height: '200px', position: 'relative' }}>
+      <Doughnut data={chartData} />
+    </div>
+  );
 };
 
 // ApplicationUsageChart
@@ -71,7 +91,12 @@ export const ApplicationUsageChart = ({ data }) => {
       backgroundColor: ['#4caf50', '#f44336'],
     }],
   };
-  return <Doughnut data={chartData} />;
+  // return <Doughnut data={chartData} />;
+  return (
+    <div style={{ height: '200px', position: 'relative' }}>
+      <Doughnut data={chartData} />
+    </div>
+  );
 };
 
 // DeviceVsProjectChart
@@ -100,7 +125,12 @@ export const ObjectHealthChart = ({ data }) => {
       backgroundColor: ['#4caf50', '#ffeb3b', '#f44336'],
     }],
   };
-  return <Doughnut data={chartData} />;
+  // return <Doughnut data={chartData} />;
+  return (
+    <div style={{ height: '200px', position: 'relative' }}>
+      <Doughnut data={chartData} />
+    </div>
+  );
 };
 
 // AlertsPanel
@@ -125,7 +155,12 @@ export const ImmobilizeChart = ({ data }) => {
       backgroundColor: ['#2196f3', '#9e9e9e'],
     }],
   };
-  return <Doughnut data={chartData} />;
+  // return <Doughnut data={chartData} />;
+  return (
+    <div style={{ height: '200px', position: 'relative' }}>
+      <Doughnut data={chartData} />
+    </div>
+  );
 };
 
 // ImmobilizeStatusChart
@@ -154,7 +189,13 @@ export const ObjectGroupChart = ({ data }) => {
       backgroundColor: ['#009688'],
     }],
   };
-  return <Doughnut data={chartData} />;
+  // return <Doughnut data={chartData} />;
+  return (
+    <div style={{ height: '200px', position: 'relative' }}>
+      <Doughnut data={chartData} />
+    </div>
+  );
+  
 };
 
 // InactiveDevicesChart

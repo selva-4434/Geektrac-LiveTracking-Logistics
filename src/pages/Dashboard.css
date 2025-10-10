@@ -17,14 +17,6 @@
   box-sizing: border-box;
 }
 
-/* .sidebar-logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 30px;
-  width:60px;
-  margin-bottom:10px;
-  } */
   .logo {
     width:150px;
     margin-bottom:10px;
@@ -40,13 +32,9 @@
 
   .sidebar-nav button {
     display: flex;
-    /* align-items: center; */
-    /* gap: 12px; */
     background-color: #1a4d3a;
     border: none;
     color: white;
-    /* padding: 12px 16px; */
-    /* border-radius: 6px; */
     font-size: 15px;
     cursor: pointer;
     transition: background 0.2s;
@@ -57,24 +45,6 @@
     background-color: #256b4f;
   }
 
-  /* .icon {
-    width: 20px;
-    height: 20px;
-    background-color: white; Placeholder for icon */
-    /* border-radius: 4px;
-  } */
-
-/* .dashboard-icon { background-color: #ff9800; }
-.tracking-icon { background-color: #2196f3; }
-.reports-icon { background-color: #4caf50; }
-.charts-icon { background-color: #9c27b0; }
-.settings-icon { background-color: #607d8b; }
-.support-icon { background-color: #f44336; } */
-
-/* .label {
-  flex-grow: 1;
-  width: 5cm;
-} */
 
 .sidebar-footer {
   margin-top: auto;
@@ -95,7 +65,7 @@
 .top-header {
   position: fixed;
   top: 0;
-  left: 220px; /* width of sidebar */
+  left: 220px; 
   right: 0;
   z-index: 1000;
   background-color: white;
@@ -147,13 +117,12 @@
   transform: scale(1.1);
 }
 
-
 .content-section {
   flex: 1;
   padding: 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .content-section h1,
@@ -186,13 +155,12 @@
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 30px;
-  display: flex;
-  flex-direction: row;  
-  gap: 10px;             
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
 }
+
 
 .card {
   background-color: white;
@@ -201,8 +169,9 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  height: 350px;
 }
+
 
 .card-header {
   display: flex;
@@ -242,7 +211,6 @@
 .legend {
   list-style: none;
   padding: 0;
-  /* margin-top: 10px; */
 }
 
 .legend li {

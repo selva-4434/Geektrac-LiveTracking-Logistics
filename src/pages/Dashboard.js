@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import {
   FleetStatusChart,
@@ -14,10 +13,9 @@ import {
   ObjectGroupChart,
   InactiveDevicesChart
 } from '../components/DashboardData';
-
-
-
 import './Dashboard.css';
+import Sidebar from './Sidebar';
+
 
 const Dashboard = () => {
   const [activeSection, setActiveSection] = useState('dashboard');
@@ -122,54 +120,11 @@ const Dashboard = () => {
     <div className="dashboard-layout">
       
       {/* Sidebar */}
-      <aside className="sidebar">
-      <div className="logo">
-        <img src="/logo-file.png" alt="Geektrac Logo" className="logo" />
-      </div>
-      <nav className="sidebar-nav">
-
-        <button onClick={() => setActiveSection('dashboard')} className="button">
-        <img src="/dashboard.png" alt="dashboard Logo" className="logo-image" /> 
-          <span className="label">Dashboard</span>
-        </button>
-
-        <button onClick={() => setActiveSection('tracking')} className="button">
-          <img src="/tracking.png" alt="Logo" className="logo-image" />
-
-          <span className="label">Tracking</span>
-        </button>
-
-        <button onClick={() => setActiveSection('reports')} className="button">
-          <img src="/report.png" alt="Logo" className="logo-image" />
-          <span className="label">Reports</span>
-        </button>
-
-        <button onClick={() => setActiveSection('charts')} className="button">
-        <img src="/charts.png" alt="Logo" className="logo-image" />
-          <span className="label">Charts</span>
-        </button>
-
-        <button onClick={() => setActiveSection('settings')} className="button">
-        <img src="/settings.png" alt="Logo" className="logo-image" />
-          <span className="label">Settings</span>
-        </button>
-
-        <button onClick={() => setActiveSection('settings')} className="button">
-        <img src="/cloud-computing.png" alt="Logo" className="logo-image" />
-          <span className="label">Cloud </span>
-        </button>
-
-        <button onClick={() => setActiveSection('support')} className="button">
-        <img src="/support.png" alt="Logo" className="logo-image" />
-          <span className="label">Support</span>
-        </button>
-      </nav>
-
-        <div className="sidebar-footer"></div>
-      </aside>
+      <Sidebar setActiveSection={setActiveSection} />
 
       {/* Main panel */}
       <div className="main-panel">
+
         {/* Header with centered search bar */}
         <header className="top-header">
           <input
@@ -205,21 +160,7 @@ const Dashboard = () => {
               <div className="card-header">
                 <h3>Fleet Status</h3>
               </div>
-              {/* <div className="card-body">
-                  {dashboardData ? (
-                  <>
-                    <FleetStatusChart data={dashboardData.fleet} />
-                    <ul className="legend">
-                      <li><span className="dot green" /> {dashboardData.fleet.running} Running</li>
-                      <li><span className="dot orange" /> {dashboardData.fleet.idle} Idle</li>
-                      <li><span className="dot red" /> {dashboardData.fleet.stopped} Stopped</li>
-                      <li><span className="dot gray" /> {dashboardData.fleet.inactive} Inactive</li>
-                      <li><span className="dot white" /> {dashboardData.fleet.noData} No Data</li>
-                    </ul>
-                  </>
-                ) : ( <p>Loading...</p>
-                ) }
-              </div> */}
+              
               <div className="card-body fleet-layout">
                 <div className="chart-area">
                   <FleetStatusChart data={dashboardData.fleet} />
@@ -249,7 +190,6 @@ const Dashboard = () => {
                 )}
             </div>
           </div>
-
 
             {/* Card 3: Object Type */}
             <div className="card">
@@ -281,7 +221,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            {/* Card: Application Usage */}
+            {/* Card 5: Application Usage */}
             <div className="card">
             <div className="card-header"><h3>Application Usage</h3></div>
             <div className="card-body">
@@ -299,7 +239,7 @@ const Dashboard = () => {
             </div>
             </div>
 
-            {/* Card: Devices vs Project */}
+            {/* Card 6: Devices vs Project */}
             <div className="card">
               <div className="card-header"><h3>Devices vs Project</h3></div>
             <div className="card-body">
@@ -310,7 +250,6 @@ const Dashboard = () => {
               )}
               </div>
             </div>
-
 
             {/* Card 7: Object Health */}
             <div className="card">
@@ -323,7 +262,6 @@ const Dashboard = () => {
                 )}
               </div>
             </div>
-
 
             {/* Card 8: Alerts */}
             <div className="card">

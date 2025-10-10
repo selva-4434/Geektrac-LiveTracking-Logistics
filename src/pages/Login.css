@@ -51,3 +51,26 @@
     margin-top:15px;
   }
   
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .monkey-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .monkey-img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
