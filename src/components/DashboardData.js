@@ -16,6 +16,7 @@ export const FleetStatusChart = ({ data }) => {
   // return <Doughnut data={chartData} />;
   return (
     <div style={{ height: '200px', position: 'relative' }}>
+      
       <Doughnut data={chartData} />
     </div>
   );
@@ -27,6 +28,7 @@ export const ModelWiseChart = ({ data }) => {
   const values = labels.map(label => data[label]);
   const chartData = {
     labels,
+    
     datasets: [{
       data: values,
       backgroundColor: ['#3f51b5', '#2196f3', '#00bcd4'],
@@ -77,6 +79,7 @@ export const MobileVsWebChart = ({ data }) => {
     <div style={{ height: '200px', position: 'relative' }}>
       <Doughnut data={chartData} />
     </div>
+
   );
 };
 
@@ -181,6 +184,7 @@ export const ImmobilizeStatusChart = ({ data }) => {
 // ObjectGroupChart
 export const ObjectGroupChart = ({ data }) => {
   const labels = Object.keys(data).filter(k => k !== 'total');
+
   const values = labels.map(label => data[label]);
   const chartData = {
     labels,
